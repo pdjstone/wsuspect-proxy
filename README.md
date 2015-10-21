@@ -27,6 +27,20 @@ An example payload for PsExec is set up that will launch cmd.exe running as Admi
 ```
 python wsuspect_proxy.py psexec
 ```
+
+If you are having problems getting the script to work we'd recommend using a GUI proxy tool
+such as Burp (and configuring Burp to use this script as a proxy) to see if the update XML 
+is being correctly inserted.
+
 ## Customisation
 
 Modify payloads/payloads.ini to change the payloads and their arguments.
+
+## Known Issues
+
+- Currently doesn't support Windows 10, though it should be simple matter of adding the correct GUID to the XML templates
+- Doesn't yet support Python 3
+
+## Screenshots
+
+![Fake update delivered by WSUSpect proxy](/screenshots/fakeupdate.png "WSUSpect in action")
