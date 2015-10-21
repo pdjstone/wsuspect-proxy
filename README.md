@@ -19,7 +19,7 @@ This script has been tested on Python 2.7 on Linux. It does not yet work with Py
 To test this out, you'll need a target Windows 7 or 8 machine that is configured to receive updates 
 from a WSUS server over unencrypted HTTP. The machine should be configured to proxy through the 
 machine running this script. This can be done by manually changing the proxy settings or via other
-means such as WPAD poisoning (e.g. using Responder)
+means such as WPAD poisoning (e.g. using [Responder](https://github.com/SpiderLabs/Responder))
 ```
 python wsuspect_proxy.py payload_name [port]
 ```
