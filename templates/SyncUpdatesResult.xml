@@ -1,0 +1,32 @@
+<UpdateInfo>
+	<ID>${bundle_id}</ID>
+	<Deployment>
+		<ID>${deploy_bundle_id}</ID>
+		<Action>Bundle</Action>
+		<IsAssigned>true</IsAssigned>
+		<LastChangeTime>2015-04-15</LastChangeTime>
+		<AutoSelect>0</AutoSelect>
+		<AutoDownload>0</AutoDownload>
+		<SupersedenceBehavior>0</SupersedenceBehavior>
+		<FlagBitmask>0</FlagBitmask>
+	</Deployment>
+	<IsLeaf>true</IsLeaf>
+	<Xml>${bundle_xml}</Xml>
+</UpdateInfo>
+<UpdateInfo>
+	<ID>${install_id}</ID>
+	<Deployment>
+		<ID>${deploy_install_id}</ID>
+		<Action>Install</Action>
+		<IsAssigned>true</IsAssigned>
+		<LastChangeTime>2015-04-15</LastChangeTime>
+		<AutoSelect>0</AutoSelect>
+		<AutoDownload>0</AutoDownload>
+		<SupersedenceBehavior>0</SupersedenceBehavior>
+		<FlagBitmask>0</FlagBitmask>
+	</Deployment>
+	<IsLeaf>true</IsLeaf>
+	<Xml>${install_xml}</Xml>
+</UpdateInfo>
+
+

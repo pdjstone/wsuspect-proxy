@@ -1,0 +1,17 @@
+<ExtendedProperties DefaultPropertiesLanguage="en" Handler="http://schemas.microsoft.com/msus/2002/12/UpdateHandlers/CommandLineInstallation" MaxDownloadSize="${file_len}" MinDownloadSize="0">
+	<InstallationBehavior RebootBehavior="NeverReboots" />
+</ExtendedProperties>
+
+<Files>
+	<File Digest="${file_sha1}" DigestAlgorithm="SHA1" FileName="${orig_filename}" Size="${file_len}" Modified="2015-02-27T15:54:52Z">
+		<AdditionalDigest Algorithm="SHA256">${file_sha256}</AdditionalDigest>
+	</File>
+</Files>
+
+<HandlerSpecificData type="cmd:CommandLineInstallation">
+	<InstallCommand Arguments="${prog_args}" Program="${orig_filename}" RebootByDefault="false" DefaultResult="Succeeded">
+		<ReturnCode Reboot="true" Result="Succeeded" Code="3010" />
+		<ReturnCode Reboot="false" Result="Failed" Code="1603" />
+		<ReturnCode Reboot="false" Result="Failed" Code="-2147024894" />
+	</InstallCommand>
+</HandlerSpecificData>

@@ -1,0 +1,15 @@
+<UpdateIdentity UpdateID="${bundle_guid}" RevisionNumber="201" />
+<Properties UpdateType="Software" />
+<Relationships>
+  <Prerequisites>
+    <AtLeastOne>
+      <UpdateIdentity UpdateID="6407468e-edc7-4ecd-8c32-521f64cee65e" /> <!-- Satisfied by Win 8 -->
+      <UpdateIdentity UpdateID="59653007-e2e9-4f71-8525-2ff588527978" /> <!-- Satisfied by Win 7 -->
+    </AtLeastOne>
+  </Prerequisites>
+</Relationships>
+<ApplicabilityRules>
+  <IsInstallable>
+    <b.FileExists Csidl="41" Path="\mswsock.dll" />
+  </IsInstallable>
+</ApplicabilityRules>

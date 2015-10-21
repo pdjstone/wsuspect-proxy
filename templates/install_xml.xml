@@ -1,0 +1,13 @@
+<UpdateIdentity UpdateID="${install_guid}" RevisionNumber="201" />
+<Properties UpdateType="Software" ExplicitlyDeployable="true" AutoSelectOnWebSites="true" />
+<Relationships>
+  <Prerequisites>
+    <AtLeastOne IsCategory="true">
+      <UpdateIdentity UpdateID="0fa1201d-4330-4fa8-8ae9-b877473b6441" /> <!-- satisfied by Win 7 -->
+      <UpdateIdentity UpdateID="6407468e-edc7-4ecd-8c32-521f64cee65e" /> <!-- satisfied by Win 8 -->
+    </AtLeastOne>
+  </Prerequisites>
+  <BundledUpdates>
+    <UpdateIdentity UpdateID="${bundle_guid}" RevisionNumber="201" />
+  </BundledUpdates>
+</Relationships>

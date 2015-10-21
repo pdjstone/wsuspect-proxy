@@ -1,0 +1,5 @@
+<ExtendedProperties DefaultPropertiesLanguage="en" MsrcSeverity="Important" IsBeta="false">
+	<SupportUrl>http://support.microsoft.com</SupportUrl>
+	<SecurityBulletinID>MS15-041</SecurityBulletinID>
+	<KBArticleID>3037581</KBArticleID>
+</ExtendedProperties>

@@ -1,0 +1,8 @@
+<LocalizedProperties>
+	<Language>en</Language>
+	<Title>${update_title}</Title>
+	<Description>${update_description}</Description>
+	<UninstallNotes>This software update can be removed by selecting View installed updates in the Programs and Features Control Panel.</UninstallNotes>
+	<MoreInfoUrl>http://support.microsoft.com/kb/3037581</MoreInfoUrl>
+	<SupportUrl>http://support.microsoft.com</SupportUrl>
+</LocalizedProperties>
