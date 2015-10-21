@@ -43,4 +43,4 @@ Modify payloads/payloads.ini to change the payloads and their arguments.
 
 ## Screenshots
 
-![Fake update delivered by WSUSpect proxy](/screenshots/fakeupdate.png "WSUSpect in action")
+![Fake update delivered by WSUSpect proxy](screenshots/fakeupdate.png "WSUSpect in action")
