@@ -12,7 +12,7 @@ You'll need the Python Twisted library installed. You can do this by running:
 pip install twisted
 ```
 
-You also need to place an MS-signed binary (e.g. PsExec) into the payloads directory. 
+You also need to place a Microsoft-signed binary (e.g. [PsExec](https://technet.microsoft.com/en-gb/sysinternals/bb897553.aspx)) into the payloads directory. 
 This script has been tested on Python 2.7 on Linux. It does not yet work with Python 3.x; contributions are welcome.
  
 ## Usage
