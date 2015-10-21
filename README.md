@@ -1,5 +1,9 @@
 # WSUSpect Proxy
 
+Written by Paul Stone and Alex Chapman, [Context Information Security](http://www.contextis.com)
+
+## Summary
+
 This is a proof of concept script to inject 'fake' updates into non-SSL WSUS traffic.
 It is based on our BlackHat USA 2015 presentation, 'WSUSpect – Compromising the Windows Enterprise via Windows Update'
 
@@ -33,12 +37,11 @@ such as Burp (and configuring Burp to use this script as a proxy) to see if the 
 is being correctly inserted.
 
 ## Customisation
-
 Modify payloads/payloads.ini to change the payloads and their arguments.
 
 ## Known Issues
 
-- Currently doesn't support Windows 10, though it should be simple matter of adding the correct GUID to the XML templates
+- Currently doesn't support Windows 10 targets, though it should be simple matter of adding the correct GUIDs to the XML templates
 - Doesn't yet support Python 3
 
 ## Screenshots
