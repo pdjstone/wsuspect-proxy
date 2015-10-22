@@ -8,7 +8,7 @@ This is a proof of concept script to inject 'fake' updates into non-SSL WSUS tra
 It is based on our BlackHat USA 2015 presentation, 'WSUSpect – Compromising the Windows Enterprise via Windows Update'
 
 - White paper: http://www.contextis.com/documents/161/CTX_WSUSpect_White_Paper.pdf
-- Slides: TODO
+- Slides: http://www.contextis.com/documents/162/WSUSpect_Presentation.pdf
 
 ## Prerequisites
 You'll need the Python Twisted library installed. You can do this by running:
@@ -46,4 +46,5 @@ Modify payloads/payloads.ini to change the payloads and their arguments.
 ## Screenshots
 
 ![WSUSpect in action](screenshots/fakeupdate.png "WSUSpect in action")
+
 ![WSUSpect script output](screenshots/output.png "WSUSpect script output")
