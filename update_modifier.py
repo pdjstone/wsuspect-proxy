@@ -37,7 +37,7 @@ from xml.sax.saxutils import escape
 
 class FakeWsusUpdate(object):
     def __init__(self, payload, args, title, description):
-        self.payload_path = payload 
+        self.payload_path = os.path.join('payloads', payload)
         self.payload_args = args
         self.title = title
         self.description = description
@@ -110,13 +110,14 @@ class WsusXmlModifier(object):
         action = req.getAllHeaders().get('soapaction', None)
         return action and WsusXmlModifier.WSUS_SOAP_ACTION in action
           
-    def get_response(self, request):
-        request.setHeader('content-type', 'application/octet-stream')
+    def get_response(self, req):
+        if req.method == 'GET':
+            print('Serving payload %s (%s)' % (basename(self.update.payload_path), self.update.title))
+        req.setHeader('content-type', 'application/octet-stream')
         return self.update.get_data()
         
     def modify_request(self, request):
         headers = request.getAllHeaders().copy()
-        print('SOAPAction: %s' % headers.get('soapaction', None))
         
         # Remove compression header
         if headers.get('accept-encoding', '') == 'xpress':
@@ -144,6 +145,7 @@ class WsusXmlModifier(object):
         request.response_buffer = content
         
     def __modify_extended_update_response(self, content, request):
+        print('Adding fake update metadata to GetExtendedUpdateInfoResult')
         update_xml = self.__gen_extended_update_response_xml()
         file_xml = self.__gen_file_location_xml(request.getAllHeaders()['host'])
         
@@ -205,6 +207,7 @@ class WsusXmlModifier(object):
         return content
 
     def __modify_sync_update_response(self, content, request):
+        print('Adding fake update metadata to SyncUpdatesResult')
         data = self.__gen_sync_update_response_xml()
         if '<NewUpdates>' in content:
             content = content.replace('</NewUpdates>', '%s</NewUpdates>' % data)

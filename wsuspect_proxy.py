@@ -20,6 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+import os.path
 import sys
 try:
     import configparser
@@ -35,7 +36,7 @@ from update_modifier import WsusXmlModifier, FakeWsusUpdate
 PROXY_PORT = 8080
 
 config = configparser.RawConfigParser()
-config.read('payloads/payloads.ini')
+config.read(os.path.join('payloads', 'payloads.ini'))
 
 if len(sys.argv) < 2:
     print('Usage: %s payload_name [port]' % sys.argv[0])

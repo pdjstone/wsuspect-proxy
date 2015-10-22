@@ -40,10 +40,10 @@ is being correctly inserted.
 Modify payloads/payloads.ini to change the payloads and their arguments.
 
 ## Known Issues
-
 - Currently doesn't support Windows 10 targets, though it should be simple matter of adding the correct GUIDs to the XML templates
 - Doesn't yet support Python 3
 
 ## Screenshots
 
-![Fake update delivered by WSUSpect proxy](screenshots/fakeupdate.png "WSUSpect in action")
+![WSUSpect in action](screenshots/fakeupdate.png "WSUSpect in action")
+![WSUSpect script output](screenshots/output.png "WSUSpect script output")

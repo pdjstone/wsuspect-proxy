@@ -81,7 +81,6 @@ class InterceptingProxyRequest(proxy.ProxyRequest):
             self.request_buffer = self.content.read()
             
         for m in self.modifiers:
-            print('Calling %s to modify request %s' % (m.__class__.__name__, self.uri))
             m.modify_request(self)
             
         if self.requestHeaders.hasHeader('content-length'):
@@ -106,7 +105,6 @@ class InterceptingProxyRequest(proxy.ProxyRequest):
 
     def run_response_modifiers(self):
         for m in self.modifiers:
-            print('Calling %s to modify response %s' % (m.__class__.__name__, self.uri))
             m.modify_response(self)
 
     def has_response_server(self):
@@ -119,13 +117,15 @@ class InterceptingProxyRequest(proxy.ProxyRequest):
         body = None
         for m in self.modifiers:
             if m.will_serve_response(self):
-                print('Calling %s to serve response %s' % (m.__class__.__name__, self.uri))
                 body = m.get_response(self)
                 break
         if not body:
             raise Exception('Nothing served a resource')
         self.setHeader('content-length', str(len(body)))
-        self.write(body)
+        if self.method == 'HEAD':
+            self.write('')
+        else:
+            self.write(body)
         self.finish()
         
     def process(self):
