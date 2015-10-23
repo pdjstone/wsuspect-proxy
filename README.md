@@ -17,7 +17,7 @@ pip install twisted
 ```
 
 You also need to place a Microsoft-signed binary (e.g. [PsExec](https://technet.microsoft.com/en-gb/sysinternals/bb897553.aspx)) into the payloads directory. 
-This script has been tested on Python 2.7 on Linux. It does not yet work with Python 3.x; contributions are welcome.
+This script has been tested on Python 2.7. It does not yet work with Python 3.x; contributions are welcome.
  
 ## Usage
 To test this out, you'll need a target Windows 7 or 8 machine that is configured to receive updates 
@@ -40,7 +40,7 @@ is being correctly inserted.
 Modify payloads/payloads.ini to change the payloads and their arguments.
 
 ## Known Issues
-- Currently doesn't support Windows 10 targets, though it should be simple matter of adding the correct GUIDs to the XML templates
+- Currently doesn't support Windows 10 targets
 - Doesn't yet support Python 3
 
 ## Screenshots
